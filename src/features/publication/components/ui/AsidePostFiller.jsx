@@ -2,7 +2,7 @@ import React from 'react'
 
 function AsidePostFilter() {
   return (
-    <div>AsidePostFilter</div>
+    <div className='bg-gray'>AsidePostFilter</div>
   )
 }
 

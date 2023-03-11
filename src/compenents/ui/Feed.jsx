@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Feed({childreen}) {
+function Feed({children}) {
   return (
     <div className='bg-black w-[60%]'>
-        <li>here</li>
-        {childreen}
+        {children}
     </div>
   )
 }

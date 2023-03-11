@@ -6,7 +6,7 @@ function UserRoutes() {
           <BrowserRouter>
                <Routes>
                     <Route path="admin/*" element/>
-                    <Route path='/*' element={<Userlayout/>}/>
+                    <Route path='user/*' element={<Userlayout/>}/>
                     {/* <Route path='auth/*' element/> */}
                </Routes>
           </BrowserRouter>

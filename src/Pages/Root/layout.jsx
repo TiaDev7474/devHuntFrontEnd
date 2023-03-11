@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Postlayout from '../../Layout/Postlayout'
 import RootLayout from '../../Layout/RootLayout'
+import Publayout from '../Post/layout'
 
 function layout() {
   return (
     <Fragment>
             <Routes>
-                  <Route path='/'element={<RootLayout/>}>
-                      <Route path='post'element={<Postlayout/>}/>
+                  <Route element={<RootLayout/>}>
+                      <Route path='post'element={<Publayout/>}/>
                   </Route>  
             </Routes>
     </Fragment>

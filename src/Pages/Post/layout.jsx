@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { CreatePost, PostFeed, PostItem } from '../../features/publication'
+import Postlayout from '../../Layout/Postlayout'
 
 
 function Publayout() {
@@ -10,10 +11,13 @@ function Publayout() {
   return (
          <Fragment>
               <Routes>
-                        <Route path='' index  element={<PostFeed/>}/>
-                         <Route path=':postId' element={<PostItem/>}/>
-                         <Route path=':postId/edit' element={<CreatePost/>}/>
-                         <Route path='create' element={<CreatePost/>}/>
+                 <Route element={<Postlayout/>}>
+                      <Route path='' index={true}  element={<PostFeed/>}/> 
+                      <Route path=':postId' element={<PostItem/>}/>
+                      <Route path=':postId/edit' element={<CreatePost/>}/>
+                      <Route path='create' element={<CreatePost/>}/>
+                 </Route>
+                
               </Routes>
          </Fragment>
 

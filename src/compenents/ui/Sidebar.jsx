@@ -1,9 +1,9 @@
 import React from 'react'
 
-function sidebar({childreen}) {
+function sidebar({children}) {
   return (
     <div className='bg-red w-[20%]'>
-        {childreen}
+        {children}
     </div>
   )
 }
