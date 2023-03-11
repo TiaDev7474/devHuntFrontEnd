@@ -8,7 +8,7 @@ function layout() {
     <Fragment>
             <Routes>
                   <Route element={<RootLayout/>}>
-                      <Route path='post'element={<Publayout/>}/>
+                      <Route path='post/*'element={<Publayout/>}/>
                   </Route>  
             </Routes>
     </Fragment>
