@@ -1,8 +1,8 @@
 {
     "compilerOptions":{
         "baseUrl":".",
-        "path":{
-            "@features/*":["src/features"],    
+        "paths":{
+            "@features/*":["src/features/*"]  
         }
     }
 }

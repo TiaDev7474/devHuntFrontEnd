@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AuthLayout({childreen}) {
+function Feed({childreen}) {
   return (
     <div>
         {childreen}
@@ -8,4 +8,4 @@ function AuthLayout({childreen}) {
   )
 }
 
-export default AuthLayout
+export default Feed
