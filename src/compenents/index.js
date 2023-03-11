@@ -1,3 +1,3 @@
-export * from './navbar';
-export * from './ui'
+
+export {Sidebar, Rightbar, Feed} from './ui'
 

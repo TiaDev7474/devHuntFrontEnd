@@ -2,7 +2,7 @@ import React from 'react'
 
 function sidebar({childreen}) {
   return (
-    <div>
+    <div className='bg-red'>
         {childreen}
     </div>
   )
