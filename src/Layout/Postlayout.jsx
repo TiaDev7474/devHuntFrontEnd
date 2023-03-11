@@ -8,13 +8,13 @@ function Postlayout() {
   return (
     <Fragment>
         <Sidebar>
-             <AsidePostFilter/>
+             <AsidePostFilter />
         </Sidebar>
         <Feed>
-             <Outlet/>
+             <Outlet />
         </Feed>
         <Rightbar>
-             <AsidePostSuggestion/>
+             <AsidePostSuggestion />
         </Rightbar>
     </Fragment>
      

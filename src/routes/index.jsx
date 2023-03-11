@@ -5,9 +5,9 @@ function UserRoutes() {
   return (
           <BrowserRouter>
                <Routes>
-                    <Route path="/admin/*" element/>
-                    <Route path='/user/*' element={<Userlayout/>}/>
-                    <Route path='/auth/*' element/>
+                    <Route path="admin/*" element/>
+                    <Route path='/*' element={<Userlayout/>}/>
+                    {/* <Route path='auth/*' element/> */}
                </Routes>
           </BrowserRouter>
   )

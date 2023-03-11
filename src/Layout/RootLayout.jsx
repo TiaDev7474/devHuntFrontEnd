@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Outlet } from 'react-router-dom'
-import RootContainer from '../compenents/ui/RootContainer'
+import Navbar from '../compenents/navbar'
+
 
 function RootLayout() {
   return (
-      <RootContainer>
-          <Outlet/>
-          <div>I am here</div>
-      </RootContainer>
+    <Fragment>
+        <div className='bg-gray-700 h-[20vh]'>
+            <Navbar/>
+        </div>
+        <div className='bg-gray-500 h-[80vh] flex justify-center items-center'>
+            <Outlet/>
+        </div>
+    </Fragment>
   )
 }
 

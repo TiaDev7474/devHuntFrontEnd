@@ -7,8 +7,8 @@ function layout() {
   return (
     <Fragment>
             <Routes>
-                  <Route element={<RootLayout/>}>
-                      <Route path='post/*'index={true} element={<Postlayout/>}/>
+                  <Route path='/'element={<RootLayout/>}>
+                      <Route path='post'element={<Postlayout/>}/>
                   </Route>  
             </Routes>
     </Fragment>
