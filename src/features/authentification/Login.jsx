@@ -49,7 +49,7 @@ const Login = () => {
                 <h3>Vous n'avez pas de compte ?</h3>
             </div>
             <div className="text-[#00B8FF] underline">
-                <Link to='/signup' >S' inscrire</Link>
+                <Link to='/auth/signup' >S' inscrire</Link>
           </div>
         </div>
       </div>
