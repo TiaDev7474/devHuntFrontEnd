@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from '../compenents/navbar'
 import Filter from '../compenents/navbar/filter/filter.android'
 import { PostFeed } from '../features/publication'
-import Postlayout from './Postlayout'
+import Postlayout from '../Pages/Posts/Postlayout'
 
 function Userlayout() {
   return (
