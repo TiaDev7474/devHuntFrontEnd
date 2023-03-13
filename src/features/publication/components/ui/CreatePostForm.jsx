@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import AudioFileIcon from '@mui/icons-material/AudioFile';
+import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
+import { useNavigate } from 'react-router-dom';
 
 function CreatePostForm() {
+    const descRef = useRef()
+    const fileRef= useRef()
+    const navigate = useNavigate()
+   
   return (
-    <div className='bg-[#f2f2f2]'>
+    <div className='bg-[#f2f2f2] p-2 h-[79vh]'>
            <div className='flex justify-start items-center'>
               <span className='text-3xl font-bold text-[#0d0d0d] ml-10'>CREATE POST</span>
           </div>
@@ -14,13 +20,14 @@ function CreatePostForm() {
                         className='h-[150px] text-xl py-3 px-4 text-[#0d0d0d]   focus:outline-none border-b-2'
                         // value={description}
                         // onChange={(e)=>seTDescription(e.target.value)}
+                        ref={descRef}
                         name="description"
                         placeholder='Faite une description de ce que vous voulez partager....'
 
                     />
                             
                </div>
-               <div className=' bg-gray-200 h-[70px] w-full'>
+               <div className=' bg-gray-200  w-full'>
                    <label className='w-[50px]'>
                         <div className='relative flex p-1 items-center w-[50%]'>
                             
@@ -47,10 +54,15 @@ function CreatePostForm() {
                             <div  
 
                                 className='flex flex-col items-center cursor-pointer hover:bg-gray-50 p-4'>
-                                <span>Video</span>
+                                <span>
+                                    <VideoCameraBackIcon/>
+                                </span>
                             </div>        
                         </div> 
-                        <input type='file' className='hidden absolute top-0 left-0 '/>
+                        <input 
+                             ref={fileRef}
+                            type='file' 
+                            className='hidden absolute top-0 left-0 '/>
                     </label>
                     
                     
@@ -70,15 +82,15 @@ function CreatePostForm() {
                </div>
               
           </div>
-           <div className='flex justify-start items-center '>
+           <div className='flex justify-start items-center'>
                 <button 
-                    //  onClick={handleSubmit}
+                    //   onClick={handleSubmit}
                      className='text-xl text-center text-[#f2f2f2] w-[100px] ml-8 px-4 py-2 bg-[#00CF35]'>
                       Post
                 </button>
                 <button 
-                //  onClick={()=> navigate(-1)}
-                className='text-xl text-center text-[#0d0d0d] w-[100px] ml-5 px-4 py-2 bg-gray-200'>
+                    onClick={()=> navigate(-1)}
+                    className='text-xl text-center text-[#0d0d0d] w-[100px] ml-5 px-4 py-2 bg-gray-200'>
                       Cancel
                 </button>
 
