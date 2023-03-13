@@ -20,7 +20,7 @@ const links= [
 ]
 function Filter() {
   return (
-    <div className='fixed  top-16 h-[50px] bg-[#001935] z-10 w-full md:hidden'>
+    <div className='fixed px-4 top-16 h-[50px] bg-[#001935] z-10 w-full md:hidden'>
            <div className='w-[100%] text-[#f2f2f2] flex justify-between items-center'>
                <div className='text-[14px]'>
                     {

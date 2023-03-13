@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import ENI from '../../assets/imagess/logo.svg'
 import Search from '../../assets/imagess/Search.svg'
 import MessageIcon from '../../assets/imagess/message.svg'
-import userIcon from '../../assets/imagess/user.svg'
+import UserProfile from '../../assets/imagess/Nomena.jpg'
 import NotificationIcon from '../../assets/imagess/noti.svg'
 import MenuIcon from '../../assets/imagess/menu.svg'
-
 import { NavLink } from 'react-router-dom';
 import Menu from '../menu/menu'
+import { Avatar } from '@mui/material'
 
 const activeLink = {
      color:"#00CF35"
@@ -20,7 +20,7 @@ function NavBar() {
   
   return (
       <div className='fixed top-0 left-0 w-[100%] h-16 md:h-32 z-20 bg-[#001935] '>
-           <div className='w-full py-1  px-5 flex justify-between items-center relative'>
+           <div className='w-full md:py-7  px-5 flex justify-between items-center relative'>
                <div className=' md:flex justify-between items-center gap-2 '>
                      <div className=''>
                           <img src={ENI} alt='logo eni lab' className='w-[120px] h-[50px] md:w-[150px] md:h-[50px]'/>
@@ -63,7 +63,11 @@ function NavBar() {
                <div className='w-[45%] md:w-[20%] flex justify-around gap-2 items-center '>
                     <img src={NotificationIcon} alt='notification icon'className='w-5' />
                     <img src={MessageIcon} alt='message icon' className='w-6 h-6'/>
-                    <img src={userIcon} alt='user icon 'className='w-8'/>
+                    <Avatar
+                        alt="Remy Sharp"
+                        src={UserProfile}
+                        sx={{ width:30, height:30 }}
+                    />
                     <span 
                         onClick={()=>setViewMenu(!viewMenu)}
                         className='block lg:hidden'

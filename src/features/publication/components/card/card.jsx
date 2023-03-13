@@ -1,13 +1,28 @@
+
 import React from 'react'
-import UserIcon from '../../../../assets/imagess/user.svg'
+import  Photo from '../../../../assets/imagess/Nomena.jpg'
+import CardFooter from '../cardFooter'
+import HeadCard from '../CardHead'
+import ImageCard from '../imageCard'
+import TextCard from '../TextCard'
+
+
+
 
 function Card() {
-  return (
-    <div className='w-full h-[400px] py-3 px-10 flex flex-col items-start bg-black'>
-          <div className='flex '>
-               <img src={UserIcon}  alt='user profile' className='w-14 h-14'/>
-          </div>
 
+ 
+  return (
+    <div className='w-full  flex flex-col mb-1  h-auto'>
+            <HeadCard/>
+            <TextCard/>
+            <div className=' lg:h-[500px] '>
+            <img 
+                className='lg:h-[500px] w-full'
+                src={Photo} alt='file that user upload'
+            />
+    </div>
+            <CardFooter/>
     </div>
   )
 }
