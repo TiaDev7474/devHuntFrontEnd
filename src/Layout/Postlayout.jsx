@@ -1,23 +1,21 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Outlet } from 'react-router-dom'
-import {Sidebar} from '../compenents'
-import {Feed} from '../compenents'
-import {Rightbar} from '../compenents'
-import { AsidePostFilter, AsidePostSuggestion} from '../features/publication'
+import { AsidePostFilter, AsidePostSuggestion } from '../features/publication'
+import {Sidebar , Feed , Rightbar} from '../compenents'
 function Postlayout() {
   return (
-    <Fragment>
+    <div className=' relative w-full'>
         <Sidebar>
-             <AsidePostFilter />
+            <AsidePostFilter/>
         </Sidebar>
+
         <Feed>
-             <Outlet />
+            <Outlet/>
         </Feed>
         <Rightbar>
-             <AsidePostSuggestion />
+             <AsidePostSuggestion/>
         </Rightbar>
-    </Fragment>
-     
+    </div>
   )
 }
 

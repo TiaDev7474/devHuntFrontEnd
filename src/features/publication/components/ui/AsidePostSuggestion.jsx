@@ -2,7 +2,9 @@ import React from 'react'
 
 function AsidePostSuggestion() {
   return (
-    <div>AsidePostSuggestion</div>
+    <div>
+      AsidePostSuggestion
+    </div>
   )
 }
 

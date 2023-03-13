@@ -1,8 +1,11 @@
 import React from 'react'
+import { useAuth } from '../../../../hooks'
 
-function CreatePost() {
+async function CreatePost() {
+  const {user, login } = useAuth()
+  //  await login('rirynomenjanahary@gmail.com','Riry7474*!#')
   return (
-    <div>CreatePost</div>
+    <div>{console.log(user)}</div>
   )
 }
 
