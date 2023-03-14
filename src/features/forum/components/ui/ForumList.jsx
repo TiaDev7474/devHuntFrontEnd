@@ -2,7 +2,9 @@ import React,{useState} from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+
 function MyForum() {
+
   const [copy,setCopy] = useState(false)
   const codeString = `import React from 'react'
   function ForumRightBar() {

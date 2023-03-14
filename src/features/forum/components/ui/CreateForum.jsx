@@ -1,48 +1,31 @@
 import React,{useCallback, useState} from 'react';
-import CodeEditor from '@uiw/react-textarea-code-editor';
+import { AnimatePresence } from 'framer-motion';
+import CodeInput from '../Create/CodeInput';
+import TextInput from '../Create/TextInput';
+import {motion} from 'framer-motion'
 
-
-
-function CreateForum() {
-  const [code, setCode] = React.useState(
-    `function add(a, b) {\n  return a + b;\n}`
-  );
-  const [placeholder,SetPlaceholder] = useState("Please enter JS code.")
-  const [language,setlanguage] = useState('javascript')
+function CreateForum() {      
   const [addCode,setAddCode] = useState(false)
-
-  const HandleLanguageChange =  useCallback(()=>{
-    setlanguage(`Please enter a ${language} code`)
-  },[])
   const HandleAddCodeChange = useCallback(()=>{
     setAddCode(ancien=>!ancien)
   },[])
   return (
     <div className='w-full'>
-      <div className="border border-white flex flex-col">
-        <div className="text-[#f2f2f2] flex justify-between items-center">
-          <h3 >Poser une Question ?</h3>
-          <h3>Ajouter une champ de code</h3>
-        </div>
-      </div>
-      
-      {
-        addCode && (
-          <CodeEditor
-          value={code}
-          language={language}
-          placeholder={placeholder}
-          onChange={(evn) => setCode(evn.target.value)}
-          padding={15}
-          style={{
-            fontSize: 12,
-            backgroundColor: "black",
-            fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-          }}
-        />
-        )
-      }
-
+        <motion.div className=" bg-[#ffffff16]   h-[55vh] rounded-lg mt-1 mx-4 p-3 overflow-hidden">
+          <AnimatePresence>
+            <motion.div className="flex flex-col">
+              {addCode ? <CodeInput/> : <TextInput HandleClikCode={HandleAddCodeChange} />}
+            </motion.div>
+          </AnimatePresence>
+            <div className="flex justify-start items-center h-[7vh] mt-2">
+              <button className='text-[#f2f2f2] bg-[#00CF35] rounded-lg p-2'>
+                  Demander
+              </button>
+              <button className='ml-4 bg-transparent border border-[#00cf35] text-[#00cf35] p-2 rounded-lg'>
+                  Annuler
+              </button>
+            </div>
+        </motion.div>
     </div>
   )
 }
