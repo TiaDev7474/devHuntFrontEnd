@@ -7,6 +7,11 @@ import { CreatePostForm, PostFeed } from '../features/publication'
 import ForumLayout from '../Pages/forum/LayoutForum'
 import Postlayout from '../Pages/Posts/Postlayout'
 
+<<<<<<< HEAD
+=======
+
+import Postlayout from '../Pages/Posts/Postlayout'
+>>>>>>> f851d12026312026b68522dc637ac4b83a20b973
 
 function Userlayout() {
   return (
